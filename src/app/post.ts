@@ -20,4 +20,8 @@ export class Post {
   getId() {
     return this.id;
   }
+
+  getTitle() {
+    return this.title;
+  }
 }

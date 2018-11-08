@@ -13,7 +13,7 @@ import {GetData} from './post.actions';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private apiService: ApiService, private store: Store, private postModel: Post) {
+  constructor(private apiService: ApiService, private store: Store) {
 
   }
 
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   displayData() {
 
     // this.posts$.map((post) => {
-    //   console.log(post);
+    console.log(this.posts$);
     // });
 
   }

@@ -1,5 +1,5 @@
 <div>
   <ul>
-    <li *ngFor="let p of posts$ | async">{{p.userId}}</li>
+    <li *ngFor="let p of posts$ | async">{{p.getTitle()}}</li>
   </ul>
 </div>

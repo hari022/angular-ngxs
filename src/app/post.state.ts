@@ -24,9 +24,15 @@ export class PostState {
 
   @Selector()
   public static post(state: PostStateModel) {
-    return state.posts.filter((post) => {
-      return post.userId = 1;
-    });
+    // return state.posts.filter((post) => {
+    //   //console.log(post);
+    //   if (post.id = 1) {
+    //     console.log(post);
+    //     return post;
+    //   }
+    //
+    // });
+    return state.posts;
   }
 
 
@@ -35,7 +41,7 @@ export class PostState {
     const state = getState();
     let data: Post[];
     this.api.getData().subscribe((post) => {
-      console.log(post);
+
       data = post;
 
       setState({

@@ -19,7 +19,7 @@ import {Post} from './post';
       PostState
     ]),
   ],
-  providers: [ApiService, Post],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
