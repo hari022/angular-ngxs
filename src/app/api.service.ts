@@ -14,7 +14,8 @@ export class ApiService {
 
   getData() {
     return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts').pipe(map(response => {
-      return response.map((x) => new Post(x.body, x.id, x.title, x.userId));
+      //return response.map((x) => new Post(x.body, x.id, x.title, x.userId));
+      return response.map((x) => new Post(x));
 
     }));
   }

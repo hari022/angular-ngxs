@@ -4,6 +4,9 @@ import {Post} from './post';
 import {Select, Store} from '@ngxs/store';
 import {PostState} from './post.state';
 import {GetData} from './post.actions';
+import {forEach} from '@angular/router/src/utils/collection';
+import {post} from 'selenium-webdriver/http';
+import {of} from 'rxjs';
 
 
 @Component({
@@ -29,9 +32,7 @@ export class AppComponent implements OnInit {
 
   displayData() {
 
-    // this.posts$.map((post) => {
     console.log(this.posts$);
-    // });
 
   }
 
