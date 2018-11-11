@@ -7,6 +7,7 @@ import {GetData} from './post.actions';
 import {forEach} from '@angular/router/src/utils/collection';
 import {post} from 'selenium-webdriver/http';
 import {of} from 'rxjs';
+import {map} from 'rxjs/operators';
 
 
 @Component({
@@ -32,8 +33,14 @@ export class AppComponent implements OnInit {
 
   displayData() {
 
-    console.log(this.posts$);
-
+    // console.log(this.posts$);
+    this.posts$.subscribe(posts => {
+      posts.map((post) => {
+        if (post.getId() === 1) {
+          console.log(post);
+        }
+      });
+    });
   }
 
 
